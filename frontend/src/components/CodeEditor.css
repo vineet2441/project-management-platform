@@ -1,0 +1,91 @@
+.code-editor-container {
+  width: 100%;
+  padding: 20px;
+  background: var(--bg-secondary, #1a1a2e);
+  border-radius: 8px;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.editor-header h3 {
+  margin: 0;
+  color: var(--text-primary, #00ffff);
+  font-size: 1.3rem;
+}
+
+.save-btn {
+  padding: 8px 16px;
+  background: var(--primary-color, #00ffff);
+  color: #1a1a2e;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #00dddd;
+  transform: translateY(-2px);
+}
+
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.code-textarea {
+  width: 100%;
+  min-height: 500px;
+  padding: 15px;
+  background: #0f0f1e;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.code-textarea:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.code-textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: #0a0a15;
+}
+
+.error-message {
+  padding: 12px;
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+  border-left: 4px solid #ff6b6b;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.success-message {
+  padding: 12px;
+  background: rgba(0, 255, 0, 0.1);
+  color: #51cf66;
+  border-left: 4px solid #51cf66;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #00ffff;
+}

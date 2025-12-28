@@ -1,0 +1,233 @@
+.projects-list-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  margin-bottom: 3rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-explore,
+.btn-dashboard {
+  background: linear-gradient(135deg, rgba(189, 0, 255, 0.2) 0%, rgba(0, 102, 255, 0.2) 100%);
+  border-color: var(--neon-purple);
+  color: var(--neon-purple);
+  font-size: 0.9rem;
+  padding: 0.6em 1.2em;
+}
+
+.btn-explore:hover,
+.btn-dashboard:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.btn-create-project {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2) 0%, rgba(0, 102, 255, 0.2) 100%);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  font-size: 1rem;
+  padding: 0.75em 1.5em;
+  margin-bottom: 2rem;
+}
+
+.btn-create-project:hover {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+}
+
+.create-form {
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.create-form h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.create-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.create-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.create-form input,
+.create-form textarea {
+  width: 100%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+
+.project-content {
+  padding: 2rem;
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.project-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: auto;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-actions {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.btn-view,
+.btn-delete {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  padding: 1em;
+  font-size: 0.9rem;
+}
+
+.btn-view {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.1) 0%, rgba(0, 102, 255, 0.1) 100%);
+  border-right: 1px solid var(--border-color);
+}
+
+.btn-view:hover {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2) 0%, rgba(0, 102, 255, 0.2) 100%);
+  transform: none;
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, rgba(255, 0, 127, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
+  border-color: #ff007f;
+  color: #ff007f;
+}
+
+.btn-delete:hover {
+  background: linear-gradient(135deg, rgba(255, 0, 127, 0.2) 0%, rgba(255, 0, 255, 0.2) 100%);
+  transform: none;
+}
+
+.error-message {
+  background: rgba(255, 0, 127, 0.1);
+  border: 1px solid #ff007f;
+  color: #ff007f;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.empty-state h3 {
+  margin-bottom: 1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .projects-list-page {
+    padding: 1rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .header-actions {
+    width: 100%;
+  }
+  
+  .header-actions button {
+    flex: 1;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

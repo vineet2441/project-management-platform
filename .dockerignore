@@ -1,0 +1,82 @@
+# Version control
+.git/
+.gitignore
+.svn/
+.hg/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js dependencies and build artifacts
+node_modules/
+dist/
+build/
+out/
+npm-debug.log
+yarn-debug.log
+
+# Java build outputs
+backend/target/
+*.class
+
+# Test and debug files
+test/
+tests/
+debug/
+*.log
+
+# Environment and secrets
+.env*
+*.env
+*.pem
+*.key
+*.crt
+config.local.*
+*.local.yml
+.local/
+
+# Temporary and cache files
+tmp/
+temp/
+*.tmp
+
+# Documentation and markdown
+*.md
+README*
+docs/
+
+# Docker and compose files
+Dockerfile*
+docker-compose*
+
+# Project-specific data repos (if not needed in build)
+data/
+
+# Exclude empty folders (optional, if not needed)
+**/.keep
+
+# Exclude example files
+*.example
+
+# Exclude XML config (if not needed)
+*.xml
+
+# Exclude HTML files outside src/public (if not needed)
+*.html
+
+# Exclude files with no extension (if not needed)
+*
+
+# Allow necessary files back in (uncomment if needed)
+#!frontend/package.json
+#!frontend/package-lock.json
+#!frontend/tsconfig.json
+#!frontend/tsconfig.node.json
+#!frontend/vite.config.ts
+#!backend/pom.xml
+#!backend/src/
+#!frontend/src/
+#!frontend/public/

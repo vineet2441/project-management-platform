@@ -1,0 +1,190 @@
+.git-panel-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.git-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.git-tab {
+  padding: 0.75em 1.5em;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  bottom: -2px;
+}
+
+.git-tab:hover {
+  color: var(--neon-cyan);
+  border-bottom-color: var(--neon-cyan);
+  box-shadow: none;
+  transform: none;
+}
+
+.git-tab.active {
+  color: var(--neon-cyan);
+  border-bottom-color: var(--neon-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+
+.git-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.git-form {
+  padding: 2rem;
+}
+
+.git-form h4 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.git-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.git-form input {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.form-row button {
+  flex-shrink: 0;
+}
+
+.branches-list {
+  padding: 2rem;
+}
+
+.branches-list h4 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.branch-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.branch-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  background: rgba(26, 34, 53, 0.4);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.branch-item:hover {
+  background: rgba(26, 34, 53, 0.7);
+  border-color: var(--neon-cyan);
+}
+
+.branch-item.current {
+  background: rgba(0, 240, 255, 0.1);
+  border-color: var(--neon-cyan);
+}
+
+.branch-icon {
+  font-size: 1.2rem;
+  color: var(--neon-cyan);
+}
+
+.branch-name {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.git-actions {
+  padding: 2rem;
+}
+
+.git-actions h4 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.btn-pull {
+  background: linear-gradient(135deg, rgba(0, 255, 127, 0.2) 0%, rgba(0, 240, 255, 0.2) 100%);
+  border-color: #00ff7f;
+  color: #00ff7f;
+}
+
+.btn-pull:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.btn-push {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 165, 0, 0.2) 100%);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.btn-push:hover {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+}
+
+.error-message {
+  background: rgba(255, 0, 127, 0.1);
+  border: 1px solid #ff007f;
+  color: #ff007f;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .git-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .action-buttons {
+    grid-template-columns: 1fr;
+  }
+}
